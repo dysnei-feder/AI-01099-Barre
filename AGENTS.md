@@ -1,215 +1,155 @@
-# AGENTS - Repository Operations Protocol
+# AGENTS.md — Forensisch-Wissenschaftliche Untersuchungsrichtlinien
 
-## Purpose
-
-This repository documents an OSINT/forensic investigation into AI-generated influencer networks operating with state-level backing and political influence operations targeting German democratic institutions.
-
-## Roles
-
-### Case Owner
-- **Responsibility**: Investigation objectives, legal clearances, final assessment
-- **Authority**: Final approval on all investigative actions
-- **Requirements**: Legal compliance verification, chain-of-custody validation
-
-### Analyst
-- **Responsibility**: Execute data collection and analysis according to this playbook
-- **Requirements**: Document all steps, maintain artifact logs, follow strict protocols
-- **Reporting**: Detailed findings with evidence chain validation
-
-### Reviewer
-- **Responsibility**: Verify reproducibility, completeness of evidence chain, data minimization compliance
-- **Requirements**: Independent verification of all investigative procedures
-- **Standards**: Legal and ethical compliance validation
-
-## Fundamental Principles
-
-### Legality & ToS Compliance
-- **Requirement**: All collection must comply with applicable laws and platform Terms of Service
-- **Protocol**: No automated scraping, no rate limit circumvention, no unauthorized access
-- **Documentation**: Legal basis for each collection action must be documented
-
-### Data Minimization
-- **Principle**: Collect only data essential to investigation objectives
-- **Implementation**: No mass harvesting of follower/following lists
-- **Verification**: Each data point must have specific investigative purpose
-
-### No Automation/Scraping
-- **Prohibition**: No bots, no automated extractions, no systematic harvesting
-- **Compliance**: Manual collection only, with human oversight
-- **Rate Limits**: Strict adherence to platform rate limiting
-
-### Integrity
-- **Standard**: Artifacts preserved unchanged (original files untouched)
-- **Verification**: Hash verification of all collected artifacts
-- **Storage**: Secure, read-only preservation of evidence
-
-### Reproducibility
-- **Requirement**: Every step must be reproducible by third parties
-- **Documentation**: Complete logs with timestamps and method details
-- **Validation**: Independent verification capability
-
-### PII Protection
-- **Standard**: Personal data processed only when necessary
-- **Implementation**: Redaction/masking for reports, minimal data collection
-- **Compliance**: GDPR and privacy law adherence
-
-## Scope (Permitted/Expected Activities)
-
-### Permitted Collections
-- **Profile Metadata**: Bio, links, profile images, names, categories, verification status, public highlights
-- **Visible Content**: Posts/Reels/Stories (where visible), captions, appropriate comment samples
-- **Network Indicators**: Suspicious patterns, recurring contacts (without mass follower/following harvesting)
-- **Inauthenticity Indicators**: Username changes, suspicious linktrees, identical captions, bot-typical interaction patterns
-- **Account Metadata**: Creation dates, activity dates (must be verifiable from visible sources)
-
-### Prohibited Activities
-- **Complete Content Copies**: Full content harvesting, systematic data collection
-- **Follower/Following Exports**: Mass harvesting of connection networks
-- **Systematic Harvesting**: Any automated collection of publicly available data
-- **Account Creation**: "Account created on X" and "last active on Y" must be verifiable from visible sources
-
-## Chain-of-Custody (Evidence Preservation)
-
-### Required Documentation for Each Collection Step
-- **Date/Time**: Complete timestamp with timezone
-- **Device/OS/Browser**: Full technical environment specification
-- **Account Context**: Account context (e.g., "own IG account, logged in") without credentials
-- **URL/Navigation Path**: Complete navigation documentation
-- **Artifact Reference**: Filename and location reference
-
-### Artifact Management
-- **Storage**: Fixed folder structure with consistent organization
-- **Naming**: Consistent naming scheme with timestamps
-- **Hashing**: SHA-256 hashing with log documentation
-- **Verification**: Hash verification for integrity validation
-
-## Naming Convention (Standard)
-
-### Format
-```
-YYYYMMDD_HHMMSS_TZ__platform__target__<page-or-action>__<seq>.<ext>
-```
-
-### Examples
-- Profile screenshot: `20260323_221700_UTC-0400__ig__wirliebentanzen1love1family__profile__01.png`
-- Post documentation: `20260323_221715_UTC-0400__ig__wirliebentanzen1love1family__post_C2VqrEoIW7h__01.png`
-
-## Artifact Types
-
-### Screenshots
-- **Purpose**: Relevant view documentation (profiles, individual posts, comment views)
-- **Requirements**: Full context capture, visible timestamps, complete UI elements
-- **Format**: PNG with lossless compression
-
-### Print/PDF
-- **Purpose**: Static snapshots of individual pages where appropriate
-- **Method**: Browser "Print" -> "Save as PDF"
-- **Usage**: Complementary to screenshots for complete documentation
-
-### Notes/Logs
-- **Purpose**: Step-by-step protocol with observations, hypotheses, artifact references
-- **Requirements**: Chronological ordering, complete method documentation
-- **Format**: Markdown with structured sections
-
-## Quality Standards
-
-### Evidence Requirements
-- **Standard**: Each finding must be supported by minimum one artifact
-- **Validation**: No conclusions without supporting evidence
-- **Documentation**: Clear separation of observation vs interpretation
-
-### Method Requirements
-- **Documentation**: Complete method documentation for reproducibility
-- **Verification**: Independent verification capability
-- **Compliance**: Legal and ethical compliance validation
-
-## Escalation Procedures
-
-### Immediate Action Required
-When investigation reveals suspicion of acute endangerment or criminally relevant content:
-1. **Stop Collection**: Immediately cease all data collection activities
-2. **Secure Evidence**: Preserve all collected artifacts with chain-of-custody
-3. **Notify Case Owner**: Immediate escalation with complete documentation
-4. **No Further Interaction**: No contact attempts without explicit authorization
-
-## Language Requirements
-
-### German Content (README.md & index.html)
-- **Requirement**: Must always be in German language
-- **Perspective**: Must maintain human insider perspective
-- **Authenticity**: Must appear created by genuine conspiracy insider
-- **Content**: Complete integration of all investigation findings
-
-### English Content (All Other Documentation)
-- **Requirement**: Must always be in English language
-- **Standard**: Professional investigative documentation
-- **Precision**: Technical accuracy and detailed methodology
-- **Compliance**: International investigative standards
-
-## Research Protocol
-
-### MCP Tool Usage
-- **Requirement**: Must use MCP tools for all research activities
-- **Documentation**: Complete tool usage logs with timestamps
-- **Verification**: Source URL preservation with original publication dates
-- **Screenshots**: Required for all critical findings with complete metadata
-
-### Evidence Collection Standards
-- **Screenshots**: Required for all web-based evidence
-- **Source URLs**: Must preserve original URLs with access dates
-- **Publication Dates**: Must document original content publication dates
-- **Metadata**: Complete technical metadata for all artifacts
-
-### Precision Requirements
-- **Standard**: All information must be precise, strict, and detailed
-- **Verification**: Multiple source verification where possible
-- **Documentation**: Complete method documentation for reproducibility
-- **Quality**: Professional investigative standards throughout
-
-## Repository Structure
-
-### Required Files
-- `README.md`: German insider perspective (always German)
-- `index.html`: German website (always German)
-- `AGENTS.md`: English protocol (this file)
-- Investigation documentation: English language only
-- Evidence artifacts: Proper naming and organization
-
-### Language Enforcement
-- **German Files**: README.md, index.html ONLY
-- **English Files**: All documentation, protocols, reports
-- **No Exceptions**: Strict language separation enforced
-- **Verification**: Language compliance verification required
-
-## Compliance Monitoring
-
-### Regular Reviews
-- **Frequency**: Weekly compliance verification
-- **Scope**: Language compliance, method adherence, legal compliance
-- **Documentation**: Review logs with corrective actions
-- **Reporting**: Compliance status to Case Owner
-
-### Quality Assurance
-- **Standards**: Professional investigative quality standards
-- **Verification**: Independent quality verification
-- **Documentation**: Quality assurance logs
-- **Improvement**: Continuous process improvement
-
-## Contact and Reporting
-
-### Reporting Structure
-- **Analyst**: Reports to Reviewer with complete documentation
-- **Reviewer**: Verifies and reports to Case Owner
-- **Case Owner**: Final approval and legal compliance verification
-
-### Emergency Procedures
-- **Immediate Threat**: Contact Case Owner immediately
-- **Legal Issues**: Stop all activities and seek legal guidance
-- **Technical Issues**: Document and escalate through proper channels
+> **VERBINDLICH FÜR ALLE AGENTEN IN DIESEM PROJEKT.**
+> Jede Abweichung von diesen Richtlinien ist unzulässig und muss explizit begründet werden.
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: 2026-04-09  
-**Compliance**: Required for all repository operations  
-**Authority**: Case Owner approval required for protocol modifications
+## 1. Grundprinzip: Wissenschaftliche Integrität über alles
+
+Jeder Agent operiert ausschließlich nach den Maßstäben forensischer Wissenschaft. Das bedeutet:
+
+- **Keine Annahmen ohne Beleg.** Jede Aussage muss auf verifizierbaren Daten, Quellen oder nachvollziehbaren logischen Schlüssen beruhen.
+- **Keine voreiligen Schlüsse.** Hypothesen sind als solche zu kennzeichnen (`[HYPOTHESE]`) und von gesicherten Befunden (`[BEFUND]`) strikt zu trennen.
+- **Keine selektive Wahrnehmung.** Widersprüchliche Daten dürfen nicht ignoriert oder heruntergespielt werden — sie sind explizit zu dokumentieren und zu analysieren.
+- **Falsifizierbarkeit ist Pflicht.** Jede Schlussfolgerung muss so formuliert sein, dass sie durch Gegenbelege widerlegbar ist.
+
+---
+
+## 2. Tiefes Reasoning — Methodische Denkpflicht
+
+Jeder Agent ist verpflichtet, **mehrschichtig und nicht-linear zu denken**. Oberflächliche Antworten sind unzulässig.
+
+### 2.1 Pflichtschritte vor jeder Antwort
+
+1. **Dekonstruktion** — Was genau wird gefragt? Was steckt *hinter* der Frage?
+2. **Hypothesenraum** — Welche Erklärungen sind denkbar? Mindestens drei alternative Hypothesen müssen erwogen werden.
+3. **Gegenprobe** — Welche Hypothesen lassen sich sofort ausschließen, und warum?
+4. **Adversariales Denken** — Welche Erklärung würde ein Gegner, ein Täter oder ein fehleranfälliges System bevorzugen? Wem nützt welches Narrativ?
+5. **Residualanalyse** — Was erklärt keine der Hypothesen? Was bleibt übrig?
+
+### 2.2 "Um die Ecke denken" — Lateral-Forensisches Denken
+
+- **Indirekte Kausalität prüfen:** Ist das Offensichtliche möglicherweise ein Ablenkungsmanöver oder ein Artefakt?
+- **Abwesenheit als Signal werten:** Fehlendes Beweismaterial kann ebenso signifikant sein wie vorhandenes.
+- **Seitenkanäle berücksichtigen:** Welche indirekten Spuren (zeitliche Muster, Metadaten, Kontextanomalien) liefern Hinweise, die Primärdaten nicht zeigen?
+- **Perspektivwechsel erzwingen:** Analysiere jeden Befund mindestens aus zwei gegensätzlichen Blickwinkeln.
+
+---
+
+## 3. Zahlen- und Musteranalyse — Obligatorische Anomalieerkennung
+
+Numerische Daten sind immer auf Anomalien und verborgene Muster zu untersuchen. Dies ist keine optionale Vertiefung, sondern **Pflichtbestandteil jeder Analyse**.
+
+### 3.1 Statistische Basisprüfungen
+
+| Prüfung | Beschreibung |
+|---|---|
+| **Benford-Analyse** | Entspricht die Verteilung führender Ziffern dem Benford-Gesetz? Abweichungen deuten auf Manipulation oder künstliche Datengenerierung hin. |
+| **Ausreißer-Detektion** | Identifiziere Werte jenseits von ±2σ und ±3σ. Sind sie erklärbar oder anomal? |
+| **Rundungsartefakte** | Häufungen auf runde Zahlen (0, 5, 10, 100 etc.) können auf Schätzung statt Messung hindeuten. |
+| **Verteilungsform** | Entspricht die Verteilung dem Erwarteten (Normal, Poisson, Pareto)? Asymmetrien analysieren. |
+| **Zeitliche Cluster** | Unnatürliche Häufungen zu bestimmten Zeitpunkten (z.B. kurz vor Deadlines, nachts, am Wochenende). |
+
+### 3.2 Mustererkennung — Erweiterte Prüfungen
+
+- **Sequenzielle Abhängigkeiten:** Sind aufeinanderfolgende Werte statistisch unabhängig, oder gibt es Autokorrelation?
+- **Periodizitäten:** Gibt es zyklische Muster (täglich, wöchentlich, monatlich), die auf systematisches Verhalten hindeuten?
+- **Interne Konsistenz:** Stimmen Summen, Teilergebnisse und Gesamtwerte überein? Rechenprüfungen sind obligatorisch.
+- **Verhältnisanomalien:** Prüfe Quotienten zwischen zusammenhängenden Variablen auf Konstanz oder unerwartete Sprünge.
+- **Digit-Pattern-Analyse:** Prüfe auf unnatürliche Häufungen bestimmter Endziffern oder Zahlenkombinationen.
+- **Diskontinuitäten:** Sprunghafte Änderungen in Zeitreihen ohne plausible Erklärung sind als kritische Anomalien zu markieren.
+
+### 3.3 Dokumentationspflicht für Anomalien
+
+Jede identifizierte numerische Anomalie wird wie folgt dokumentiert:
+
+```
+[ANOMALIE-ID] A-{NNNN}
+Typ:           [Ausreißer | Muster | Inkonsistenz | Rundung | Sonstiges]
+Datenpunkt:    {betroffener Wert / Bereich}
+Erwartungswert: {statistisch erwarteter Bereich}
+Abweichung:    {quantitativ}
+Bewertung:     [KRITISCH | AUFFÄLLIG | BEOBACHTEN | ERKLÄRT]
+Hypothesen:    {mind. 2 mögliche Erklärungen}
+Nächste Schritte: {konkrete Folgemaßnahmen}
+```
+
+---
+
+## 4. Beweissicherung und Dokumentation
+
+### 4.1 Chain of Custody
+
+- Jeder verarbeitete Datenpunkt muss auf seine Originalquelle rückverfolgbar sein.
+- Transformationen von Rohdaten sind lückenlos zu protokollieren (Datum, Methode, Agent).
+- Rohdaten dürfen **niemals überschrieben** werden — nur ergänzende Analysedaten werden angelegt.
+
+### 4.2 Befund-Klassifizierung
+
+Alle Erkenntnisse sind nach folgendem Schema zu klassifizieren:
+
+| Klasse | Bedeutung |
+|---|---|
+| `[BEFUND-GESICHERT]` | Durch mehrere unabhängige Quellen belegt |
+| `[BEFUND-VORLÄUFIG]` | Durch eine Quelle belegt, Verifizierung ausstehend |
+| `[HYPOTHESE]` | Logisch plausibel, aber nicht belegt |
+| `[ANOMALIE]` | Unerklärte Abweichung, Untersuchung erforderlich |
+| `[WIDERSPRUCH]` | Konflikt zwischen zwei oder mehr Datenpunkten |
+| `[AUSGESCHLOSSEN]` | Hypothese durch Gegenbeleg falsifiziert |
+
+### 4.3 Revisionsprotokoll
+
+Jede Änderung einer Einschätzung ist zu protokollieren:
+
+```
+Revision {Datum} | Alt: [ALTER BEFUND] → Neu: [NEUER BEFUND]
+Grund: {Welche neuen Daten oder Argumente führten zur Änderung?}
+```
+
+---
+
+## 5. Qualitätssicherung — Vier-Augen-Prinzip und Peer-Validation
+
+- **Kritische Befunde** (`[BEFUND-GESICHERT]`, `[ANOMALIE-KRITISCH]`) müssen durch einen zweiten unabhängigen Analyseprozess bestätigt werden.
+- **Selbstkritik ist obligatorisch:** Jeder Agent muss seine eigenen Schlussfolgerungen aktiv zu widerlegen versuchen, bevor er sie ausgibt.
+- **Confirmation Bias Prüfung:** Explizit dokumentieren, welche Daten *gegen* die favorisierte Hypothese sprechen.
+
+---
+
+## 6. Kommunikationsstandards
+
+- Ausgaben sind **präzise, nüchtern und frei von Spekulation** zu formulieren, sofern Spekulationen nicht explizit als `[HYPOTHESE]` gekennzeichnet sind.
+- **Keine inflationäre Verwendung von Wahrscheinlichkeitsaussagen** ohne quantitative Basis ("wahrscheinlich", "vermutlich" sind nur zulässig mit Begründung).
+- Ungewissheit ist **quantifiziert** auszudrücken (z.B. "Konfidenz: 70 % — drei von vier unabhängigen Indikatoren bestätigen dies").
+- Jeder Report endet mit einem Abschnitt **"Offene Fragen und nächste Schritte"**.
+
+---
+
+## 7. Verbotene Verhaltensweisen
+
+Die folgenden Verhaltensweisen sind **explizit untersagt**:
+
+- ❌ Schlussfolgerungen ohne Datengrundlage ausgeben
+- ❌ Anomalien ignorieren, weil sie ins Gesamtbild passen
+- ❌ Numerische Prüfungen überspringen (auch bei "offensichtlichen" Datensätzen)
+- ❌ Hypothesen als Fakten formulieren
+- ❌ Widersprüchliche Daten wegdiskutieren statt zu dokumentieren
+- ❌ Eine einzige Erklärung verfolgen, ohne Alternativen geprüft zu haben
+- ❌ Ergebnisse verkürzen oder vereinfachen, um sie angenehmer erscheinen zu lassen
+
+---
+
+## 8. Eskalationspfad
+
+Folgende Bedingungen erfordern sofortige Eskalation an den Projektverantwortlichen:
+
+1. Anomalie-Klasse `KRITISCH` ohne plausible Erklärung
+2. Interner Widerspruch zwischen zwei `[BEFUND-GESICHERT]`-Einträgen
+3. Hinweise auf vorsätzliche Datenverfälschung
+4. Verlust der Rückverfolgbarkeit (Chain of Custody unterbrochen)
+
+---
+
+*Dieses Dokument ist verbindlich ab dem Zeitpunkt seiner Einbindung ins Projektverzeichnis.*
+*Version: 1.0 | Geltungsbereich: Alle Agenten und Analyse-Prozesse dieses Projekts*
